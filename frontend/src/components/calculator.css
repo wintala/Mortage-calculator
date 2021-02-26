@@ -1,0 +1,94 @@
+#calculator {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: rgb(228, 227, 243);
+	padding: 50px;
+	border-radius: 1em;
+}
+
+#calculator h1{
+	text-align: center;
+	margin-top: 0;
+}
+
+#calculator form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#calculator form > div {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
+}
+
+#calculator form > div div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#calculator form > div p {
+	font-weight: bold;
+}
+
+#calculator form button {
+	padding: 10px 5px;
+	background-color: rgb(174, 93, 255);
+	border-radius: 3em;
+	width: 120px;
+	color: white;
+	font-size: 15px;
+	border: none;
+	outline: none;
+	margin: 10px;
+	cursor: pointer;
+}
+
+#calculator form button:hover {
+	background-color: white;
+	color: rgb(174, 93, 255);
+}
+
+#calculator form input {
+	background-color: rgb(160, 160, 160);
+	color: white;
+	font-weight: bold;
+	padding: 8px;
+	border: none;
+	outline: none;
+	border-radius: 2px;
+	width: 190px;
+}
+
+#calculator form input:hover {
+	border: 2px solid white;
+	padding: 8px 6px;
+}
+
+#calculator table{
+	margin-top: 20px;
+	width: 400px;
+	background-color: white;
+	padding: 5px 10px;
+	border-radius: 5px;
+	border: 3px solid rgb(174, 93, 255);
+	border-collapse: collapse;
+}
+
+#calculator tr{
+	border-bottom: 3px solid rgb(174, 93, 255)
+}
+
+#calculator tr:first-child{
+	font-weight: bold;
+ 
+}
+
+#calculator td{
+	padding: 3px;
+}

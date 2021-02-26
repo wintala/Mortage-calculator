@@ -1,0 +1,35 @@
+
+.mortage-table {
+	margin-top: 20px;
+  width: 600px;
+  color: #ffffff;
+  background-color: rgb(136, 152, 224);
+	border-collapse: collapse;
+	overflow: hidden;
+}
+
+.mortage-table tr {
+  height: 40px;
+}
+
+.mortage-table td, .mortage-table th{
+  padding: 10px;
+  border-bottom: 3px solid white;
+  text-align: left;
+}
+
+.mortage.table th{ 
+	background-color: blueviolet;
+	font-weight: bold;
+}
+
+.mortage-table tr:last-child td{
+  border-bottom: none;
+}
+
+
+.mortage-table tr:first-child{
+	background-color: blueviolet;
+	font-weight: bold;
+	text-align: left;
+}
