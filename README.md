@@ -1,8 +1,10 @@
 # Code test - Mortage plan
 
+Client-server type solution with SQLite database.
+
 ### Backend
-Java application  
-Install dependencies in pom.xml mith maven and run  
+REST API styled app made with Java Spark web framework
+Install dependencies in pom.xml with maven and run  
 The app should run on port 4567  
 
 ### Frontend
