@@ -19,7 +19,7 @@ import java.util.List;
 public class MortageDatabaseHandler {
     private Connection connection = null;
     private Statement statement;
-    private int currentId = 0; // I had trouble getting the auto increment to work so decided to keep track of indices manually
+    private int currentId = 0; // I had trouble getting the auto increment to work so I decided to keep track of indices manually
 
     public MortageDatabaseHandler() {
 

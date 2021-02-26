@@ -25,8 +25,8 @@ public class Main {
 
         MortageDatabaseHandler mortageDBhandler = new MortageDatabaseHandler();
 
-        // endpoint that returns info about the loan in json form
-        get("/api/mortagecalculator", (req, res) -> {
+        // endpoint that returns info about the loan in json form and saves loan info into the db
+        post("/api/mortagecalculator", (req, res) -> {
                 int years;
                 double loanSize;
                 double interest;
