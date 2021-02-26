@@ -3,7 +3,7 @@
 Client-server type solution with SQLite database.
 
 ### Backend
-REST API styled app made with Java Spark web framework
+REST API styled app made with Java Spark web framework  
 Install dependencies in pom.xml with maven and run  
 The app should run on port 4567  
 
