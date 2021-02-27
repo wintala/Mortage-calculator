@@ -24,18 +24,18 @@ public class MathHelpers {
     public static double nthRoot(double num, int root, double precision) {
         if (num == 0) {
             return 0;
-        } else if (num == 1) {
-            return 1;
         }
 
-        double lowerBound = 0;
+        double lowerBound = num < 1 ? num : 1;
         double upperBound = num < 1 ? 1 : num;
 
         while(true) {
             double guess = (upperBound + lowerBound) / 2;
             double test = raiseToPower(guess, root);
+            double testUpper = raiseToPower(guess + precision, root);
+            double testLower = raiseToPower(guess - precision, root);
 
-            if (absDiff(test, num) < precision) {
+            if (num > testLower && num < testUpper) {
                 return guess;
             }
 

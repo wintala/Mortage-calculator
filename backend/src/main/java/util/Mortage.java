@@ -18,7 +18,7 @@ public class Mortage {
         this.loanSize = loanSize;
         this.payments = years * 12;
         this.interest = interest;
-        this.monthlyInterest = nthRoot(1 + this.interest, 12, 0.00000001) - 1;
+        this.monthlyInterest = nthRoot(1 + this.interest, 12, 0.000000001) - 1;
 
         double mi = this.monthlyInterest;
         int p = this.payments;
