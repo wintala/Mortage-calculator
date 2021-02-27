@@ -17,7 +17,7 @@ public class Main {
         // allowing CORS
         after((Filter) (request, response) -> {
             response.header("Access-Control-Allow-Origin", "*");
-            response.header("Access-Control-Allow-Methods", "GET");
+            response.header("Access-Control-Allow-Methods", "*");
         });
 
         // specifying content type
@@ -25,21 +25,21 @@ public class Main {
 
         MortageDatabaseHandler mortageDBhandler = new MortageDatabaseHandler();
 
-        // endpoint that returns info about the loan in json form and saves loan info into the db
+        // endpoint that returns info about the loan in json form and saves loan into the db
         post("/api/mortagecalculator", (req, res) -> {
                 int years;
                 double loanSize;
                 double interest;
-                String name;
+                String name = req.queryParams("name");
                 try {
-                    name = req.queryParams("name");
                     years = Integer.parseInt(req.queryParams("years"));
                     loanSize = Double.parseDouble(req.queryParams("loanSize"));
                     interest = Double.parseDouble(req.queryParams("interest"));
                 } catch (Exception e) {
-                    return "Error: data must be in numeric form";
+                    res.status(400);
+                    return "Error: request must contain parameters years, loanSize and interest and they must in numeric form";
                 }
-                Gson gson = new Gson();
+                Gson gson = new Gson(); // used to convert object to json
                 Mortage mortage = new Mortage(name, years, loanSize, interest);
                 mortageDBhandler.addMoratge(mortage);
                 return gson.toJson(mortage);

@@ -7,7 +7,7 @@ const getData = async (name, loanSize, interest, years) => {
     params: {name, loanSize, interest, years},
   }
 
-  return axios.get(`${baseUrl}/api/mortagecalculator`, config).then(response => response.data)
+  return axios.post(`${baseUrl}/api/mortagecalculator`, null, config).then(response => response.data)
 }
 
 const getList = async () => {

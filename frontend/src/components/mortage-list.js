@@ -5,7 +5,7 @@ import "./mortage-list.css"
 const MortageList = () => {
 	const [data, setData] = useState(null)
 	useEffect(() => {
-		service.getList().then(r => setData(r))
+		service.getList().then(r => setData(r)).catch(e => alert(`Following wrror occured: ${e}`))
 	}, [])
 
 	return(
